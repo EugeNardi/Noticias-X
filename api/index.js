@@ -169,6 +169,6 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 */
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log("La aplicacion se esta ejecutando en el puerto 8080");
 //

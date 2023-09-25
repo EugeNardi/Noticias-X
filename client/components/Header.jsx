@@ -35,7 +35,7 @@ const Header = () => {
         
 
         <Link to={"/"} className="logo">
-          X-Noticias
+          Noticias-X
         </Link>
       
         
