@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 const Ciencia = () => {
   const [posts, setPosts] = useState([])
   useEffect(() =>{
-     fetch("http://localhost:4000/post").then(response => {
+     fetch("http://localhost:8080/post").then(response => {
          response.json().then(posts =>{
             const categoryPosts = posts.filter((post) => post.category === "Ciencia");
             setPosts(categoryPosts);

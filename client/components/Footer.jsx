@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
     </div>
     </div>
-    <p className="copyrigth">ElInversor$-copyrigth© 2023 director general:Eugenio Nardi</p>
+    <p className="copyrigth">X-Noticias-copyrigth© 2023 director general:Eugenio Nardi</p>
     </>
   )
 }

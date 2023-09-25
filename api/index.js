@@ -169,6 +169,6 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 */
-app.listen(4000);
-console.log("La aplicacion se esta ejecutando en el puerto 4000");
+app.listen(8080);
+console.log("La aplicacion se esta ejecutando en el puerto 8080");
 //

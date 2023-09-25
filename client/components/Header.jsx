@@ -9,7 +9,7 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch("http://localhost:8080/profile", {
       credentials: "include",
       method: "GET",
     }).then((response) => {
@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
+    fetch("http://localhost:8080/logout", {
       credentials: "include",
       method: "POST",
     });
@@ -35,7 +35,7 @@ const Header = () => {
         
 
         <Link to={"/"} className="logo">
-          Noticias-X
+          X-Noticias
         </Link>
       
         

@@ -28,7 +28,7 @@ const PostPage = () => {
       <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
       <div className="author">Por {postInfo.author}</div>
       <div className="image">
-      <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+      <img src={`http://localhost:8080/${postInfo.cover}`} alt="" />
       </div>
       <div className="content">
 
