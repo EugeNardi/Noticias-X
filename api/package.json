@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon api/index.js",
-     "build": "npm  --out-dir dist"
+    "dev": "nodemon api/index.js"
   },
   "keywords": [],
   "author": "",
