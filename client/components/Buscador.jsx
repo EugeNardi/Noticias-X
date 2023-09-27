@@ -55,3 +55,4 @@ const Buscador = () => {
 export default Buscador;
 
   //<Index searchResults={resultados}/>
+  

@@ -13,7 +13,7 @@ const fs = require('fs');
 
 
 const salt = bcrypt.genSaltSync(10);
-const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+const secret = 'asdfe45we45w345wegw345werjktjwertkjasbfoafnqwojfbqwijfm13rboj12ren1oinoqwndipw';
 
 app.use(cors({credentials:true,origin:'http://localhost:5173'}));
 app.use(express.json());
@@ -39,7 +39,7 @@ app.post('/register', async (req,res) => {
 app.post('/login', async (req,res) => {
   const {username,password} = req.body;
   const userDoc = await User.findOne({username});
-  const passOk = bcrypt.compareSync(password, userDoc.password);
+  const passOk =  bcrypt.compareSync(password, userDoc.password);
   if (passOk) {
     // logged in
     jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
@@ -55,9 +55,15 @@ app.post('/login', async (req,res) => {
 });
 
 app.get('/profile', (req,res) => {
-  const {token} = req.cookies;
-  jwt.verify(token, secret, {}, (err,info) => {
-    if (err) throw err;
+  const { token } = req.cookies;
+  if (!token) {
+    return res.status(401).json({ error: 'Token no proporcionado' });
+  }
+
+  jwt.verify(token, secret, (err, info) => {
+    if (err) {
+      return res.status(401).json({ error: 'Token inválido o expirado' });
+    }
     res.json(info);
   });
 });
