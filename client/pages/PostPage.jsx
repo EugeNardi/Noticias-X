@@ -10,7 +10,7 @@ const PostPage = () => {
 
     const {id} = useParams();
     useEffect(() => {
-        fetch(`http://localhost:8080/post/${id}`).then(response => {
+        fetch(`https://noticias-x.onrender.com/${id}`).then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
             })
@@ -28,7 +28,7 @@ const PostPage = () => {
       <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
       <div className="author">Por {postInfo.author}</div>
       <div className="image">
-      <img src={`http://localhost:8080/${postInfo.cover}`} alt="" />
+      <img src={`https://noticias-x.onrender.com/${postInfo.cover}`} alt="" />
       </div>
       <div className="content">
 

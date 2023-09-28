@@ -9,7 +9,7 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:8080/profile", {
+    fetch("https://noticias-x.onrender.com/profile", {
       credentials: "include",
       method: "GET",
     }).then((response) => {
@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   function logout() {
-    fetch("http://localhost:8080/logout", {
+    fetch("https://noticias-x.onrender.com/logout", {
       credentials: "include",
       method: "POST",
     });

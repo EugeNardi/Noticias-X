@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 const Finanzas = () => {
   const [posts, setPosts] = useState([])
   useEffect(() =>{
-     fetch("http://localhost:8080/post").then(response => {
+     fetch("https://noticias-x.onrender.com/post").then(response => {
          response.json().then(posts =>{
             const categoryPosts = posts.filter((post) => post.category === "Finanzas");
             setPosts(categoryPosts);

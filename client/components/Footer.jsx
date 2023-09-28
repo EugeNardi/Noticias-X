@@ -19,13 +19,13 @@ const Footer = () => {
         <h1 className="footer-title">Contacto</h1>
         <div className="footer-p">
         
-        <a href="/https://www.instagram.com/eugenio.nardii/" id='Icon-contacto'><InstagramIcon/></a>
-        <a href="/https://github.com/EugeNardi" id='Icon-contacto'><GitHubIcon/></a>
+        <a href="https://www.instagram.com/eugenio.nardii/" id='Icon-contacto'><InstagramIcon/></a>
+        <a href="https://github.com/EugeNardi" id='Icon-contacto'><GitHubIcon/></a>
         <a href="https://twitter.com/Eugge2006" id='Icon-contacto'><TwitterIcon/></a>
         </div>
     </div>
     </div>
-    <p className="copyrigth">X-Noticias-copyrigth© 2023 director general:Eugenio Nardi</p>
+    <p className="copyrigth">Noticias-X-copyrigth© 2023 director general:Eugenio Nardi</p>
     </>
   )
 }

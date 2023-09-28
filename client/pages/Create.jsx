@@ -54,7 +54,7 @@ async function createNewPost(ev){
    data.set("category", category);  
     ev.preventDefault();
 
-  const response =  await fetch('http://localhost:8080/post', 
+  const response =  await fetch('https://noticias-x.onrender.com/post', 
     {
       method: 'POST',
       body: data,

@@ -7,7 +7,7 @@ const Index = () => {
 
   useEffect(() => {
   
-      fetch("http://localhost:8080/post")
+      fetch("https://noticias-x.onrender.com/post")
         .then((response) => {
           response.json().then((posts) => {
             setPosts(posts.slice(0, 10));
