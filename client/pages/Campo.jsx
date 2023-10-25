@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 const Campo = () => {
   const [posts, setPosts] = useState([])
   useEffect(() =>{
-     fetch("https://noticias-x.onrender.com/post").then(response => {
+     fetch("https://back-blog-beta.vercel.app/post").then(response => {
          response.json().then(posts =>{
             const categoryPosts = posts.filter((post) => post.category === "Campo");
             setPosts(categoryPosts);

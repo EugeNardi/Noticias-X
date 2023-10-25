@@ -8,7 +8,7 @@ const Post = ({_id,title,summary,cover,content,createdAt,author,category}) => {
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-        <img src={"https://noticias-x.onrender.com/"+cover} alt=""/>
+        <img src={"https://back-blog-beta.vercel.app/"+cover} alt=""/>
         </Link>
       </div>
       <div className="texts">

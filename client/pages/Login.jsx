@@ -13,16 +13,16 @@ const Login = () => {
 
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch("https://noticias-x.onrender.com/login", {
+    const response = await fetch("https://back-blog-beta.vercel.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
+      credentials:"include", 
       body: JSON.stringify({
         username,
         password
       }),
-      credentials:"include", 
     });
 
     if(response.ok){

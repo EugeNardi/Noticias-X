@@ -4,16 +4,15 @@ import Footer from "../components/Footer";
 
 const Index = () => {
   const [posts, setPosts] = useState([]);
-
+   
   useEffect(() => {
-  
-      fetch("https://noticias-x.onrender.com/post")
-        .then((response) => {
-          response.json().then((posts) => {
-            setPosts(posts.slice(0, 10));
-          });
+    fetch("https://back-blog-beta.vercel.app/post")
+      .then((response) => {
+        response.json().then((posts) => {
+          setPosts(posts.slice(0, 10));
         });
       });
+  }, []);
 
   return (
     <>

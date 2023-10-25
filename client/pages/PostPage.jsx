@@ -10,12 +10,12 @@ const PostPage = () => {
 
     const {id} = useParams();
     useEffect(() => {
-        fetch(`https://noticias-x.onrender.com/${id}`).then(response => {
+        fetch(`https://back-blog-beta.vercel.app/post/${id}`).then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
             })
         })
-        console.log(id);
+
     },[])
 
     if(!postInfo) return "";
@@ -28,7 +28,7 @@ const PostPage = () => {
       <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
       <div className="author">Por {postInfo.author}</div>
       <div className="image">
-      <img src={`https://noticias-x.onrender.com/${postInfo.cover}`} alt="" />
+      <img src={`https://back-blog-beta.vercel.app/${postInfo.cover}`} alt="" />
       </div>
       <div className="content">
 

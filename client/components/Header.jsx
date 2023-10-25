@@ -9,7 +9,7 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("https://noticias-x.onrender.com/profile", {
+    fetch("https://back-blog-beta.vercel.app/profile", {
       credentials: "include",
       method: "GET",
     }).then((response) => {
@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   function logout() {
-    fetch("https://noticias-x.onrender.com/logout", {
+    fetch("https://back-blog-beta.vercel.app/logout", {
       credentials: "include",
       method: "POST",
     });

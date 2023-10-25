@@ -1,10 +1,10 @@
 const express = require('express');
-const cors = require('cors');
+const app = express();
+ const cors = require('cors');
 const mongoose = require("mongoose");
 const User = require('./models/User');
 const Post = require('./models/Post');
 const bcrypt = require('bcryptjs');
-const app = express();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
@@ -21,6 +21,10 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect('mongodb+srv://euge060406:ElonMusk0604@cluster0.srv4o5i.mongodb.net/?retryWrites=true&w=majority');
+
+app.get("/", (req, res) =>{
+  res.json("el servidor funciona")
+})
 
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
